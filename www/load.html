@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+        <title>CR Media Moment - Load</title>
+        <style type="text/css">
+        h1 {
+        font-size: 40px !important;
+        }
+        .progress {
+    height: 200px;
+    bottom: 90px;
+    position: absolute !important;
+    left: 50%;
+    margin: 0px -107px 0px;
+}
+.progress > svg {
+    display: block;
+    height: 100%;
+}
+.progressbar-text{
+font-size:30px;
+}
+        </style>
+        <script type="text/javascript" charset="utf-8">
+
+    </script>
+    </head>
+    <body>
+    <div id="background2"></div>
+    <div class="retour">
+       <a href="index.html"><i class="fa fa-chevron-left"></i><h4>Retour</h4></a>
+    </div>
+        <div class="appimmo">
+        <h1>Sauvegarde de votre moment</h1>
+        </div>
+        <div id="progress" class="progress"></div>
+        <div class="captphototxt">
+        <h4>Merci de patienter</h4>
+        </div>
+       
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" charset="utf-8" src="json2.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/progressbar.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+            </script>
+       <script type="text/javascript">     
+            var circle = new ProgressBar.Circle('#progress', {
+    color: '#FFFFFF',
+    strokeWidth: 3,
+    trailWidth: 1,
+    duration: 3500,
+    text: {
+        value: '0'
+    },
+    step: function(state, bar) {
+        bar.setText((bar.value() * 100).toFixed(0));
+    }
+});
+
+circle.animate(1, function() {
+    window.location.href = "success.html";
+})
+        </script>
+    </body>
+</html>
