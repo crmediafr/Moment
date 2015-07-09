@@ -33,14 +33,13 @@
     // Called when capture operation is finished
     //
     function captureSuccess(mediaFiles) {
-        window.location.href = "success.html";
-        }
+        window.location.href = "load-decouverte.html";
     }
 
     // Called if something bad happens.
     //
     function captureError(error) {
-        var msg = 'Annulation la capture video';
+        var msg = 'Annulation de la prise de photo';
         navigator.notification.alert(msg, null, 'Information');
     }
 
@@ -75,10 +74,7 @@
 // Called when capture operation is finished
     //
     function captureSuccess(mediaFiles) {
-        var i, len;
-        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-            uploadFile(mediaFiles[i]);
-        }
+        window.location.href = "load-decouverte.html";
     }
 
     // Called if something bad happens.
@@ -96,24 +92,6 @@
         navigator.device.capture.captureImage(captureSuccess, captureError, {limit: 1});
     }
 
-    // Upload files to server
-    function uploadFile(mediaFile) {
-        var ft = new FileTransfer(),
-            path = mediaFile.fullPath,
-            name = mediaFile.name;
-
-        ft.upload(path,
-            "http://my.domain.com/upload.php",
-            function(result) {
-                console.log('Upload success: ' + result.responseCode);
-                console.log(result.bytesSent + ' bytes sent');
-            },
-            function(error) {
-                console.log('Error uploading file ' + path + ': ' + error.code);
-            },
-            { fileName: name });
-    }
-
     </script>
         <title>CR Media Moment</title>
         <style type="text/css">
@@ -128,17 +106,19 @@
        <a href="index.html"><i class="fa fa-chevron-left"></i><h4>Retour</h4></a>
     </div>
         <div class="appimmo">
-        <h1>Immortalisez ce moment !</h1>
+        <h1>Découvrir un moment</h1>
         </div>
         <div id="textdesc">
-        <h4>Afin de garder ce moment et de le partager avec vos proches, vous allez prendre une photo pour immortaliser ce moment capturé. Appuyer sur le bouton ci-dessous pour accéder à l'appareil photo.</h4>
+        <h4>Assurez-vous d'avoir une bonne visibilité du support de la photo et de bien le centrer.<br>
+        Notre application peut lire une photo sur un support papier (photos, article...) ou un support numérique directement depuis un écran.<br><br>
+        Dès que vous êtes prêt, appuyer sur le bouton ci-dessous</h4>
         </div>
         <div id="captphoto">
         <button onclick="captureImage();" style="border: 0; background: transparent">
          <img src="img/picture.png"width="80" height="80"></img>
         </button></div>
         <div class="captphototxt">
-        <h4>Prendre la photo</h4>
+        <h4>Accéder au lecteur</h4>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
