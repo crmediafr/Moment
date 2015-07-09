@@ -41,6 +41,7 @@
   <gap:plugin name="org.apache.cordova.vibration"/>
   <gap:plugin name="com.phonegap.plugin.statusbar" />
   <gap:plugin name="org.apache.cordova.statusbar" />
+  <gap:plugin name="net.yoik.cordova.plugins.screenorientation" />
   
   
   <icon src="icon.png"/>
@@ -73,24 +74,6 @@
   <access origin="*"/>
   
   <plugin name="cordova-plugin-whitelist" version="1"/>
-  <plugin id="com.tsukurusha.phonegap.plugins" version="0.2.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
-    <name>ScreenOrientation</name>
-    <description>Screen Orientation PhoneGap Plugin for Android</description>
-    <license>Apache 2.0</license>
-    <keywords>cordova,video player</keywords>
-    <js-module src="www/js/pg-plugin-screen-orientation.js" name="screenOrientation">
-        <merges target="navigator" />
-    </js-module>
-    <!-- android -->
-    <platform name="android">
-        <config-file target="www/res/xml/config.xml" parent="/*">
-            <feature name="ScreenOrientation">
-                <param name="android-package" value="com.tsukurusha.phonegap.plugins.ScreenOrientation" />
-            </feature>
-        </config-file>
-        <source-file src="www/src/ScreenOrientation.java" target-dir="src/com/tsukurusha/phonegap/plugins" />
-    </platform>
-</plugin>
   
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
