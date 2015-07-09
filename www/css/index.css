@@ -336,3 +336,31 @@ height:50px;
     right: 0px;
 }
 
+*Videos*/
+
+.header-unit { 
+position: inherit; 
+} 
+
+#video-container { 
+position: absolute; 
+} 
+
+#video-container { 
+top:55px; 
+left:0%; 
+height:100%;
+max-height:953px; 
+width:100%; 
+overflow: hidden;
+}
+
+video { 
+position:absolute;
+z-index:0;
+} 
+
+video.fillWidth {
+width: 100%;
+top:0px;
+}

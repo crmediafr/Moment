@@ -72,6 +72,7 @@
   <access origin="*"/>
   
   <plugin name="cordova-plugin-whitelist" version="1"/>
+  <plugin name="ScreenOrientation" value="com.tsukurusha.phonegap.plugins.ScreenOrientation" />
   
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>

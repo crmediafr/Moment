@@ -42,6 +42,7 @@
   <gap:plugin name="com.phonegap.plugin.statusbar" />
   <gap:plugin name="org.apache.cordova.statusbar" />
   
+  
   <icon src="icon.png"/>
   <icon src="www/res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
   <icon src="www/res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>
@@ -72,6 +73,7 @@
   <access origin="*"/>
   
   <plugin name="cordova-plugin-whitelist" version="1"/>
+  <plugin name="ScreenOrientation" value="com.tsukurusha.phonegap.plugins.ScreenOrientation" />
   
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
