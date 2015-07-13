@@ -244,6 +244,13 @@ height:50px;
     height: auto;
     position: absolute;
     text-align: center;
+    top: 190px;
+}
+
+#textdescsuccess {
+    height: auto;
+    position: absolute;
+    text-align: center;
     top: 130px;
 }
 
