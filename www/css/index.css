@@ -65,7 +65,8 @@ position:absolute;
 }
 
 #background-profil {
-    background: rgba(0, 0, 0, 0) url("../img/imgprofil.jpg") repeat scroll 38% 68% / 100% auto;
+    /*background: rgba(0, 0, 0, 0) url("../img/imgprofil.jpg") repeat scroll 38% 68% / 100% auto;*/
+    background: rgba(0, 0, 0, 0) url("../img/imgprofil.jpg") repeat scroll 38% 36% / 100% auto;
     height: 164px;
     position: absolute;
     width: 100%;
