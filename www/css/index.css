@@ -308,12 +308,24 @@ height:50px;
 
 .moment-thumb {
     height: 345px;
-    left: 0px;
-    margin: 0 auto;
+    left: 50%;
+    margin: 0 0 0 -175px;
     position: relative;
     top: 210px;
-    width:100%;
+    width: 360px;
 }
+
+@media (max-width: 359px) {
+.moment-thumb {
+    height: 345px;
+    left: 50%;
+    margin: 0px 0 0 -132px;
+    position: relative;
+    top: 210px;
+    width: 265px;
+}
+}
+
 .thumb {
     width: 85px;
 }
@@ -370,4 +382,27 @@ z-index:0;
 video.fillWidth {
 width: 100%;
 top:0px;
+}
+
+.capimg {
+    width: 340px;
+    height: auto;
+}
+#photo {
+    top: 245px;
+    position: relative;
+    left: 50%;
+    width: 350px;
+    margin: 0px 0px 0px -170px;
+}
+#filtre {
+    left: 50%;
+    margin: 0 0 0 -170px;
+    position: absolute;
+    top: 245px;
+    width: 350px;
+}
+.filtre {
+    width: 340px;
+    height: auto;
 }
