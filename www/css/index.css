@@ -331,7 +331,7 @@ height:50px;
 }
 
 #social {
-    bottom: 55px;
+    bottom: 30px;
     height: 80px;
     left: 50%;
     position: absolute;
@@ -389,17 +389,17 @@ top:0px;
     height: auto;
 }
 #photo {
-    top: 245px;
-    position: relative;
     left: 50%;
+    margin: 0 0 0 -170px;
+    position: relative;
+    top: 255px;
     width: 350px;
-    margin: 0px 0px 0px -170px;
 }
 #filtre {
     left: 50%;
     margin: 0 0 0 -170px;
     position: absolute;
-    top: 245px;
+    top: 255px;
     width: 350px;
 }
 .filtre {
