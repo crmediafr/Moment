@@ -34,6 +34,10 @@
     //
     function captureSuccess(mediaFiles) {
         window.location.href = "load.html";
+       var i, len;
+        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+            uploadFile(mediaFiles[i]);
+        }
     }
 
     // Called if something bad happens.
@@ -75,6 +79,10 @@
     //
     function captureSuccess(mediaFiles) {
        window.location.href = "load.html";
+       var i, len;
+        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+            uploadFile(mediaFiles[i]);
+        }
     }
 
     // Called if something bad happens.
